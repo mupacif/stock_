@@ -39,6 +39,13 @@
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity android:name=".ui.StockDetail"></activity>
+        <receiver android:name="StockAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/stock_appwidget_info" />
+        </receiver>
     </application>
 
 </manifest>
